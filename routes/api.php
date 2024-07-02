@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Admin\ProjectController;
+// use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Api\ProjectController;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,4 +18,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/projects', [ProjectController::class, 'index']);
+
+Route::get('/progects/{slug}', [ProjectController::class, 'show']);
   
